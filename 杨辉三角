@@ -1,0 +1,17 @@
+def triangles():
+   L=[1]
+   while True:
+       yield L[:]
+       L.append(0)
+       L=[L[i]+L[i-1] for i in range(len(L))]
+
+n=0
+result=[]
+for x in triangles():
+    result.append(x)
+    n=n+1
+    if n==10:
+        break
+        
+for y in result:
+    print(y)
