@@ -1,0 +1,5 @@
+def not_empty(s):
+    return s and s.strip()  #return中的and语句，True和True才能返回true，
+                            #None，0，list和tuple长度为0,map条目为0,返回值为False
+
+list(filter(not_empty,['afd','',' dfdb ',None,' ']))  #filter 只返回True的值
